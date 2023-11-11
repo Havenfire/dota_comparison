@@ -1,4 +1,7 @@
 import requests
+import json
+import csv
+import pandas as pd
 
 # note the url is 'graphql' and not 'graphiql'
 url = "https://api.stratz.com/graphql"
@@ -70,5 +73,10 @@ hero_query = """
 """
 
 r = requests.post(url, json={"query":hero_query}, headers=headers)
+data = r.json()
 
-print(r.text)
+# Use pandas to normalize the JSON data into a dataframe
+df = pd.json_normalize(data['data']['heroStats']['stats'])
+df.to_csv('hero_data.csv', index=False)
+# Print the dataframe
+print(df)
