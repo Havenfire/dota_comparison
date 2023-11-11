@@ -400,7 +400,7 @@ def main():
 
     query = """
 {
-matches(ids: [4986461644]) {
+match(ids: [4986461644]) {
   stats {
    pickBans {
         heroId
