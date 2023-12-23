@@ -21,7 +21,7 @@ for n_components in n_components_range:
     explained_variances.append(np.sum(pca.explained_variance_ratio_))
 
 # Plot explained variance for each n_components
-plt.plot(n_components_range, explained_variances, marker='o')
+plt.plot(n_components_range, explained_variances)
 plt.xlabel('Number of Components (n_components)')
 plt.ylabel('Explained Variance')
 plt.title('Explained Variance vs. Number of Components')
