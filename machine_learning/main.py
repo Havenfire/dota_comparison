@@ -1,4 +1,4 @@
-from generate_similarity import HeroSimilarityCalculator
+from machine_learning.generate_similarity_Embedding import HeroSimilarityCalculator
 
 def main():
     hero_sim_calculator = HeroSimilarityCalculator()
