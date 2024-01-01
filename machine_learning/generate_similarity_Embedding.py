@@ -28,7 +28,7 @@ class Autoencoder(nn.Module):
         x = self.decoder(x)
         return x
 
-class HeroSimilarityCalculator:
+class HeroSimilarityCalculatorEMB:
     def __init__(self, csv_file_path='hero_data.csv', embedding_dim=10):
         self.df = pd.read_csv(csv_file_path)
 
@@ -83,7 +83,3 @@ class HeroSimilarityCalculator:
 
         return similarity
 
-# Example usage
-hero_similarity_calculator = HeroSimilarityCalculator()
-similarity = hero_similarity_calculator.calculate_similarity(1, 2, 'cosine')
-print(f"Cosine Similarity between Hero 1 and Hero 2: {similarity}")

@@ -1,7 +1,8 @@
-from machine_learning.generate_similarity_Embedding import HeroSimilarityCalculator
+from generate_similarity_Embedding import HeroSimilarityCalculatorEMB
+from generate_similarity_PCA import HeroSimilarityCalculatorPCA
 
 def main():
-    hero_sim_calculator = HeroSimilarityCalculator()
+    hero_sim_calculator = HeroSimilarityCalculatorPCA()
 
     hero1_id = 16
     hero2_id = 10

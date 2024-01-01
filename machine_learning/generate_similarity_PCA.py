@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.decomposition import PCA
 from similarity_measures import cosine_similarity, euclidean_distance, manhattan_distance
 
-class HeroSimilarityCalculator:
+class HeroSimilarityCalculatorPCA:
     def __init__(self, csv_file_path='hero_data.csv', n_components=10):
         self.df = pd.read_csv(csv_file_path)
 
