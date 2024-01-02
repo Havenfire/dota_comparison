@@ -2,25 +2,30 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+
 from sklearn.metrics.pairwise import cosine_similarity, euclidean_distances, manhattan_distances
 import torch
 import torch.nn as nn
 import torch.optim as optim
 
 class Autoencoder(nn.Module):
+
     def __init__(self, input_dim, embedding_dim):
+        layer_size = 16
+
         super(Autoencoder, self).__init__()
         self.encoder = nn.Sequential(
-            nn.Linear(input_dim, 64),
+            nn.Linear(input_dim, layer_size),
             nn.ReLU(),
-            nn.Linear(64, embedding_dim),
-            nn.ReLU()
+            nn.Linear(layer_size, embedding_dim),
+            nn.ReLU(),
         )
         self.decoder = nn.Sequential(
-            nn.Linear(embedding_dim, 64),
+            nn.Linear(embedding_dim, layer_size),
             nn.ReLU(),
-            nn.Linear(64, input_dim),
-            nn.ReLU()
+            nn.Linear(layer_size, input_dim),
+            nn.ReLU(),
         )
 
     def forward(self, x):
@@ -29,28 +34,29 @@ class Autoencoder(nn.Module):
         return x
 
 class HeroSimilarityCalculatorEMB:
-    def __init__(self, csv_file_path='hero_data.csv', embedding_dim=10):
+    def __init__(self, csv_file_path='hero_data.csv', embedding_dim=4):
         self.df = pd.read_csv(csv_file_path)
 
-        # Extract numerical columns
         numerical_columns = self.df.columns[1:]  # First column is heroId
         data = self.df[numerical_columns].values
 
-        # Standardize the data
+        # TODO: What kind of scaler?
+        # scaler = MinMaxScaler()
         scaler = StandardScaler()
         scaled_data = scaler.fit_transform(data)
 
         # Split the data for training and validation
         train_data, val_data = train_test_split(scaled_data, test_size=0.2, random_state=42)
 
-        # Convert data to PyTorch tensors
         train_data_tensor = torch.FloatTensor(train_data)
         val_data_tensor = torch.FloatTensor(val_data)
 
-        # Build and train the autoencoder
         input_dim = data.shape[1]
-        model = Autoencoder(input_dim, embedding_dim)
-        criterion = nn.MSELoss()
+        model = Autoencoder(input_dim, embedding_dim)   
+
+        # Change the loss function
+        # criterion = nn.L1Loss()  # Mean Absolute Error
+        criterion = nn.MSELoss() # Mean Squared Error
         optimizer = optim.Adam(model.parameters(), lr=0.001)
 
         for epoch in range(50):
