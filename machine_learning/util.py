@@ -27,155 +27,162 @@ def manhattan_distance(embedding1, embedding2):
     distance = np.sum(np.abs(embedding1 - embedding2))
     return distance
 
-
 def generate_training_data():
 
-
+    print("Generating Training Data")
 
     # note the url is 'graphql' and not 'graphiql'
 
-
-
-    #gpm -> feature expand
     #wards?
     #items?
     #agi/str/int
 
 
     hero_query = """
-    {
-    heroStats {
-        stats{
-        heroId
-        apm
-        casts
-        abilityCasts
-        kills
-        deaths
-                assists
-        networth
-        xp
-        cs
-        dn
-        neutrals
-        heroDamage
-        towerDamage
-        physicalDamage
-        magicalDamage
-        pureDamage
-        disableCount
-        disableDuration
-        stunCount
-        stunDuration
-        slowCount
-        slowDuration
-        healingSelf
-        healingAllies
-        invisibleCount
-        runePower
-                runeBounty
-        supportGold
-        level
-        campsStacked
-        ancients
-        goldLost
-        goldFed
-        weakenCount
-        weakenDuration
-        physicalItemDamage
-        magicalItemDamage
-        healingItemSelf
-        healingItemAllies
-        attackDamage
-        castDamage
-        damage
+    query {
+        heroStats {
+            stats{
+            heroId
+            apm
+            casts
+            abilityCasts
+            kills
+            deaths
+            assists
+            networth
+            goldPerMinute
+            xp
+            cs
+            dn
+            neutrals
+            heroDamage
+            towerDamage
+            physicalDamage
+            magicalDamage
+            pureDamage
+            disableCount
+            disableDuration
+            stunCount
+            stunDuration
+            slowCount
+            slowDuration
+            healingSelf
+            healingAllies
+            invisibleCount
+            runePower
+            runeBounty
+            supportGold
+            level
+            campsStacked
+            ancients
+            goldLost
+            goldFed
+            weakenCount
+            weakenDuration
+            physicalItemDamage
+            magicalItemDamage
+            healingItemSelf
+            healingItemAllies
+            attackDamage
+            castDamage
+            damage
             kDAAverage
-        
-        
+            
+            
+            }
+            
         }
-        
-    }
     
     }
     """
+
+    print(hero_query)
 
     r = requests.post(API_URL, json={"query":hero_query}, headers=HEADERS)
     data = r.json()
 
     df = pd.json_normalize(data['data']['heroStats']['stats'])
     df.to_csv('hero_data.csv', index=False)
-    # Print the dataframe
-    print(df)
 
-
-#does not work for patch
+#does not work for patch specific yet
 def generate_matchIDs(n, patch=None):
+
+    print("Generating MatchODS")
 
     oldest = 6079846053
     youngest = 7531641143
     my_range = youngest - oldest
     match_list = []
 
-    if patch is not None:
-        for _ in range(n):
-            match_list.append(int(np.random.rand() * my_range + oldest))
+
+    for _ in range(n):
+        match_list.append(int(np.random.rand() * my_range + oldest))
 
     return match_list
 
 
-
-#need permissions to test
+#returns true/false for single, array for mutliple
 def check_real_game(match_id):
+    print(f"Checking match id for realistic properties {match_id}")
     valid_lobby_types = ["UNRANKED", "TOURNAMENT", "RANKED"]
 
-    if type(match_id) == list:
-        match_id_query = f"""
-            {{
-                matches {{
-                    match_id
-                    durationSeconds
-                    numHumanPlayers
-                    lobbyType
-                }}
-            }}
-        """
-    elif type(match_id) == int:
-        match_id_query = f"""
-            {{
-                match {{
-                    match_id: {match_id}
-                    durationSeconds
-                    numHumanPlayers
-                    lobbyType
-                }}
-            }}
+    if isinstance(match_id, int): 
+        match_id_query = """
+            query GetMatch($matchId: Long!) {
+            match(id: $matchId) {
+                durationSeconds
+                numHumanPlayers
+                lobbyType
+            }
+        }
         """
 
+        variables = {
+            "matchId": match_id
+        }
+    elif isinstance(match_id, list):
+        match_id_query = """
+            query GetMatches($matchIds: [Long!]!) {
+            matches(ids: $matchIds) {
+                id
+                durationSeconds
+                numHumanPlayers
+                lobbyType
+            }
+        }
+        """
+        variables = {
+            "matchIds": match_id
+        }
+
+    req_data = {"query": match_id_query, "variables": variables}
+
     try:
-        r = requests.post(API_URL, json={"query": match_id_query}, headers=HEADERS)
-        r.raise_for_status()  # Raise an HTTPError for bad responses
-        data = r.json()
+        response = requests.post(API_URL, headers=HEADERS, json=req_data)  # Use json parameter instead of data for JSON payload
+        response.raise_for_status()  # Raise an HTTPError for bad responses
+        data = response.json()
     except requests.exceptions.RequestException as e:
         return f"Error: {e}"
 
-    if type(match_id) == list:
+
+    if isinstance(match_id, int):
         df = pd.json_normalize(data['data']['matches'])
-
-        # Filtering based on numHumanPlayers
-        df["realGame"] = (df["numHumanPlayers"] == 10) & (df["lobbyType"].isin(valid_lobby_types))
-
-        return df["realGame"]
-
-    elif type(match_id) == int:
-        df = pd.json_normalize(data['data']['match'])
 
         # Filtering based on numHumanPlayers
         real_game = (df["numHumanPlayers"].iloc[0] == 10) and (df["lobbyType"].iloc[0] in valid_lobby_types)
 
         return real_game
+
+    #need permissions
+    elif isinstance(match_id, list):  
+        print(data)
+        df = pd.json_normalize(data['data']['match'])
+
+        # Filtering based on numHumanPlayers
+        df["realGame"] = (df["numHumanPlayers"] == 10) & (df["lobbyType"].isin(valid_lobby_types))
+
+        return df["realGame"]
     else:
         print("Error, if you've gotten here something has seriously gone wrong")
         return None
-
-
 
