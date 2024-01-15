@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
 
-from sklearn.metrics.pairwise import cosine_similarity, euclidean_distances, manhattan_distances
+from similarity_measures import cosine_similarity, euclidean_distance, manhattan_distance
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -81,9 +81,9 @@ class HeroSimilarityCalculatorEMB:
         if similarity_measure == 'cosine':
             similarity = cosine_similarity([embedding1], [embedding2])[0][0]
         elif similarity_measure == 'euclidean':
-            similarity = euclidean_distances([embedding1], [embedding2])[0][0]
+            similarity = euclidean_distance([embedding1], [embedding2])[0][0]
         elif similarity_measure == 'manhattan':
-            similarity = manhattan_distances([embedding1], [embedding2])[0][0]
+            similarity = manhattan_distance([embedding1], [embedding2])[0][0]
         else:
             raise ValueError(f"Invalid similarity measure: {similarity_measure}")
 

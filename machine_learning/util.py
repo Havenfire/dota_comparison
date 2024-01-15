@@ -191,3 +191,88 @@ def get_popular_players():
         return player_numbers
     else:
         print("Failed to retrieve the webpage. Status code:", response.status_code)
+
+def get_last_games(player_id):
+    print(f"Getting info for player: {player_id}")
+    match_id_query = """
+    query PlayerMatchesSummary($request: PlayerMatchesRequestType!, $steamId: Long!) {
+        player(steamAccountId: $steamId) {
+            steamAccountId
+            matches(request: $request) {
+            ...MatchRowSummary
+            players(steamAccountId: $steamId) {
+                ...MatchRowSummaryPlayer
+            }
+            }
+        }
+    }
+
+    fragment MatchRowBase on MatchType {
+        id
+        rank
+        lobbyType
+        gameMode
+        endDateTime
+        durationSeconds
+        allPlayers: players {
+            partyId
+        }
+        league {
+            id
+            displayName
+        }
+        analysisOutcome
+    }
+
+    fragment MatchRowBasePlayer on MatchPlayerType {
+        steamAccountId
+        heroId
+        role
+        lane
+        level
+        isVictory
+        isRadiant
+        partyId
+    }
+
+    fragment MatchRowSummary on MatchType {
+        ...MatchRowBase
+        bottomLaneOutcome
+        midLaneOutcome
+        topLaneOutcome
+        pickBans {
+            heroId
+            isCaptain
+        }
+    }
+
+    fragment MatchRowSummaryPlayer on MatchPlayerType {
+        ...MatchRowBasePlayer
+        imp
+        award
+        kills
+        deaths
+        assists
+        item0Id
+        item1Id
+        item2Id
+        item3Id
+        item4Id
+        item5Id
+    }
+    """
+
+    variables = {
+        "steamId": player_id,
+        "request": {"skip": 0, "take": 40}
+    }
+
+    req_data = {"query": match_id_query, "variables": variables}
+
+    try:
+        response = requests.post(API_URL, headers=HEADERS, json=req_data)  # Use json parameter instead of data for JSON payload
+        response.raise_for_status()  # Raise an HTTPError for bad responses
+        data = response.json()
+        return data
+    except requests.exceptions.RequestException as e:
+        return f"Error: {e}"
