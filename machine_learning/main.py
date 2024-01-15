@@ -3,10 +3,7 @@ from generate_similarity_PCA import HeroSimilarityCalculatorPCA
 import util as util
 def main():
 
-    match_int = 7531916495
-    match_list = [7533640643, 7531916495]
-    # print(util.check_real_game(match_int))
-    print(util.check_real_game(match_list))
+    util.get_popular_players()
 
     # util.generate_training_data()
     # EMB_calculator = HeroSimilarityCalculatorEMB()

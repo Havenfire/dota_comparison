@@ -3,29 +3,13 @@ import requests
 import json
 import csv
 import pandas as pd
-
-
+from bs4 import BeautifulSoup
 
 API_URL = "https://api.stratz.com/graphql"
 
 API_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWJqZWN0IjoiN2Q1ZTQ5NjQtNTUyMC00MTUxLTlkYWYtMWM4YmNlZmQxY2YyIiwiU3RlYW1JZCI6IjExMzE0OTgzMTAiLCJuYmYiOjE2OTI4NDcxNTMsImV4cCI6MTcyNDM4MzE1MywiaWF0IjoxNjkyODQ3MTUzLCJpc3MiOiJodHRwczovL2FwaS5zdHJhdHouY29tIn0.hy_J0sxfdHDq6VBJkv6i1wlU5gry1L-_TjeAjg3hpvI"
 HEADERS = {"Authorization": f"Bearer {API_TOKEN}"}
 
-
-def cosine_similarity(embedding1, embedding2):
-    dot_product = np.dot(embedding1, embedding2)
-    norm1 = np.linalg.norm(embedding1)
-    norm2 = np.linalg.norm(embedding2)
-    similarity = dot_product / (norm1 * norm2)
-    return similarity
-
-def euclidean_distance(embedding1, embedding2):
-    distance = np.linalg.norm(embedding1 - embedding2)
-    return distance
-
-def manhattan_distance(embedding1, embedding2):
-    distance = np.sum(np.abs(embedding1 - embedding2))
-    return distance
 
 def generate_training_data():
 
@@ -186,3 +170,24 @@ def check_real_game(match_id):
         print("Error, if you've gotten here something has seriously gone wrong")
         return None
 
+def get_popular_players():
+    url = "https://www.dotabuff.com/players/"
+    my_header = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
+    response = requests.get(url, headers=my_header)
+
+    if response.status_code == 200:
+        html_content = response.text
+        soup = BeautifulSoup(html_content, 'html.parser')
+
+        # Extract player numbers as integers
+        player_numbers = [int(link['href'].split("/")[-1]) for link in soup.find_all('a', href=lambda href: href and "/players/" in href and href.split("/")[-1].isdigit())]
+
+        data = {'player_ids': player_numbers}
+
+        # Store the list of player numbers as JSON
+        with open('popular_players.json', 'w') as json_file:
+            json.dump(data, json_file)
+
+        return player_numbers
+    else:
+        print("Failed to retrieve the webpage. Status code:", response.status_code)
