@@ -206,7 +206,7 @@ def get_popular_players():
     else:
         print("Failed to retrieve the webpage. Status code:", response.status_code)
 
-def get_last_games_detailed(player_id, num_games):
+def get_last_matches_detailed(player_id, num_games):
     print(f"Getting info for player: {player_id}")
     match_id_query = """
     query PlayerMatchesSummary($request: PlayerMatchesRequestType!, $steamId: Long!) {
@@ -291,12 +291,11 @@ def get_last_games_detailed(player_id, num_games):
     except requests.exceptions.RequestException as e:
         return f"Error: {e}"
     
-def get_last_games_hero(player_id, num_games):
+def get_last_matches_hero(player_id, num_games):
     print(f"Getting info for player: {player_id}")
     match_id_query =  """
     query PlayerMatchesHeroSummary($request: PlayerMatchesRequestType!, $steamId: Long!) {
         player(steamAccountId: $steamId) {
-            steamAccountId
             matches(request: $request) {
       			id
                 players(steamAccountId: $steamId) {
@@ -320,12 +319,13 @@ def get_last_games_hero(player_id, num_games):
         data = response.json()
     except requests.exceptions.RequestException as e:
         return f"Error: {e}"
-    
-    with open('pp_data_hero.json', 'w') as json_file:
-        json.dump(data, json_file, indent=4)
+
+    match_data = {}
+    match_data["m_id"] = data["data"]["player"]["matches"]
+    return match_data
     
 
-def popular_players_past_games(num_games):
+def popular_players_past_games(num_games, num_players = 10):
     with open('pp_list.json', 'r') as file:
         pp_dict = json.load(file)
     
@@ -334,17 +334,21 @@ def popular_players_past_games(num_games):
     seconds_per_call = 60 / calls_per_minute
 
     all_player_data = {}
-    limit = 10
+    limit = 0
     for p_id in pp_dict["players"]:
-        print(p_id)
-        all_player_data[p_id["id"]] = get_last_games_hero(player_id=p_id["id"], num_games=num_games)
-        limit -= 1
-        if limit < 0:
-            break
-        
+        all_player_data[p_id["id"]] = get_last_matches_hero(player_id=p_id["id"], num_games=num_games)        
         time.sleep(seconds_per_call)
 
-    with open('pp_data_detailed.json', 'w') as json_file:
+        limit += 1
+        if limit >= num_players:
+            break
+    
+    print("Writing to file")
+    
+    for match in all_player_data[p_id["id"]]["m_id"]:
+        all_player_data[p_id["id"]] = match["players"][0]["heroId"]
+
+    with open('pp_data_hero.json', 'w') as json_file:
             json.dump(all_player_data, json_file, indent=4)
 
     

@@ -1,0 +1,504 @@
+{
+    "data": {
+      "constants": {
+        "heroes": [
+          {
+            "id": 1,
+            "shortName": "antimage"
+          },
+          {
+            "id": 2,
+            "shortName": "axe"
+          },
+          {
+            "id": 3,
+            "shortName": "bane"
+          },
+          {
+            "id": 4,
+            "shortName": "bloodseeker"
+          },
+          {
+            "id": 5,
+            "shortName": "crystal_maiden"
+          },
+          {
+            "id": 6,
+            "shortName": "drow_ranger"
+          },
+          {
+            "id": 7,
+            "shortName": "earthshaker"
+          },
+          {
+            "id": 8,
+            "shortName": "juggernaut"
+          },
+          {
+            "id": 9,
+            "shortName": "mirana"
+          },
+          {
+            "id": 10,
+            "shortName": "morphling"
+          },
+          {
+            "id": 11,
+            "shortName": "nevermore"
+          },
+          {
+            "id": 12,
+            "shortName": "phantom_lancer"
+          },
+          {
+            "id": 13,
+            "shortName": "puck"
+          },
+          {
+            "id": 14,
+            "shortName": "pudge"
+          },
+          {
+            "id": 15,
+            "shortName": "razor"
+          },
+          {
+            "id": 16,
+            "shortName": "sand_king"
+          },
+          {
+            "id": 17,
+            "shortName": "storm_spirit"
+          },
+          {
+            "id": 18,
+            "shortName": "sven"
+          },
+          {
+            "id": 19,
+            "shortName": "tiny"
+          },
+          {
+            "id": 20,
+            "shortName": "vengefulspirit"
+          },
+          {
+            "id": 21,
+            "shortName": "windrunner"
+          },
+          {
+            "id": 22,
+            "shortName": "zuus"
+          },
+          {
+            "id": 23,
+            "shortName": "kunkka"
+          },
+          {
+            "id": 25,
+            "shortName": "lina"
+          },
+          {
+            "id": 26,
+            "shortName": "lion"
+          },
+          {
+            "id": 27,
+            "shortName": "shadow_shaman"
+          },
+          {
+            "id": 28,
+            "shortName": "slardar"
+          },
+          {
+            "id": 29,
+            "shortName": "tidehunter"
+          },
+          {
+            "id": 30,
+            "shortName": "witch_doctor"
+          },
+          {
+            "id": 31,
+            "shortName": "lich"
+          },
+          {
+            "id": 32,
+            "shortName": "riki"
+          },
+          {
+            "id": 33,
+            "shortName": "enigma"
+          },
+          {
+            "id": 34,
+            "shortName": "tinker"
+          },
+          {
+            "id": 35,
+            "shortName": "sniper"
+          },
+          {
+            "id": 36,
+            "shortName": "necrolyte"
+          },
+          {
+            "id": 37,
+            "shortName": "warlock"
+          },
+          {
+            "id": 38,
+            "shortName": "beastmaster"
+          },
+          {
+            "id": 39,
+            "shortName": "queenofpain"
+          },
+          {
+            "id": 40,
+            "shortName": "venomancer"
+          },
+          {
+            "id": 41,
+            "shortName": "faceless_void"
+          },
+          {
+            "id": 42,
+            "shortName": "skeleton_king"
+          },
+          {
+            "id": 43,
+            "shortName": "death_prophet"
+          },
+          {
+            "id": 44,
+            "shortName": "phantom_assassin"
+          },
+          {
+            "id": 45,
+            "shortName": "pugna"
+          },
+          {
+            "id": 46,
+            "shortName": "templar_assassin"
+          },
+          {
+            "id": 47,
+            "shortName": "viper"
+          },
+          {
+            "id": 48,
+            "shortName": "luna"
+          },
+          {
+            "id": 49,
+            "shortName": "dragon_knight"
+          },
+          {
+            "id": 50,
+            "shortName": "dazzle"
+          },
+          {
+            "id": 51,
+            "shortName": "rattletrap"
+          },
+          {
+            "id": 52,
+            "shortName": "leshrac"
+          },
+          {
+            "id": 53,
+            "shortName": "furion"
+          },
+          {
+            "id": 54,
+            "shortName": "life_stealer"
+          },
+          {
+            "id": 55,
+            "shortName": "dark_seer"
+          },
+          {
+            "id": 56,
+            "shortName": "clinkz"
+          },
+          {
+            "id": 57,
+            "shortName": "omniknight"
+          },
+          {
+            "id": 58,
+            "shortName": "enchantress"
+          },
+          {
+            "id": 59,
+            "shortName": "huskar"
+          },
+          {
+            "id": 60,
+            "shortName": "night_stalker"
+          },
+          {
+            "id": 61,
+            "shortName": "broodmother"
+          },
+          {
+            "id": 62,
+            "shortName": "bounty_hunter"
+          },
+          {
+            "id": 63,
+            "shortName": "weaver"
+          },
+          {
+            "id": 64,
+            "shortName": "jakiro"
+          },
+          {
+            "id": 65,
+            "shortName": "batrider"
+          },
+          {
+            "id": 66,
+            "shortName": "chen"
+          },
+          {
+            "id": 67,
+            "shortName": "spectre"
+          },
+          {
+            "id": 68,
+            "shortName": "ancient_apparition"
+          },
+          {
+            "id": 69,
+            "shortName": "doom_bringer"
+          },
+          {
+            "id": 70,
+            "shortName": "ursa"
+          },
+          {
+            "id": 71,
+            "shortName": "spirit_breaker"
+          },
+          {
+            "id": 72,
+            "shortName": "gyrocopter"
+          },
+          {
+            "id": 73,
+            "shortName": "alchemist"
+          },
+          {
+            "id": 74,
+            "shortName": "invoker"
+          },
+          {
+            "id": 75,
+            "shortName": "silencer"
+          },
+          {
+            "id": 76,
+            "shortName": "obsidian_destroyer"
+          },
+          {
+            "id": 77,
+            "shortName": "lycan"
+          },
+          {
+            "id": 78,
+            "shortName": "brewmaster"
+          },
+          {
+            "id": 79,
+            "shortName": "shadow_demon"
+          },
+          {
+            "id": 80,
+            "shortName": "lone_druid"
+          },
+          {
+            "id": 81,
+            "shortName": "chaos_knight"
+          },
+          {
+            "id": 82,
+            "shortName": "meepo"
+          },
+          {
+            "id": 83,
+            "shortName": "treant"
+          },
+          {
+            "id": 84,
+            "shortName": "ogre_magi"
+          },
+          {
+            "id": 85,
+            "shortName": "undying"
+          },
+          {
+            "id": 86,
+            "shortName": "rubick"
+          },
+          {
+            "id": 87,
+            "shortName": "disruptor"
+          },
+          {
+            "id": 88,
+            "shortName": "nyx_assassin"
+          },
+          {
+            "id": 89,
+            "shortName": "naga_siren"
+          },
+          {
+            "id": 90,
+            "shortName": "keeper_of_the_light"
+          },
+          {
+            "id": 91,
+            "shortName": "wisp"
+          },
+          {
+            "id": 92,
+            "shortName": "visage"
+          },
+          {
+            "id": 93,
+            "shortName": "slark"
+          },
+          {
+            "id": 94,
+            "shortName": "medusa"
+          },
+          {
+            "id": 95,
+            "shortName": "troll_warlord"
+          },
+          {
+            "id": 96,
+            "shortName": "centaur"
+          },
+          {
+            "id": 97,
+            "shortName": "magnataur"
+          },
+          {
+            "id": 98,
+            "shortName": "shredder"
+          },
+          {
+            "id": 99,
+            "shortName": "bristleback"
+          },
+          {
+            "id": 100,
+            "shortName": "tusk"
+          },
+          {
+            "id": 101,
+            "shortName": "skywrath_mage"
+          },
+          {
+            "id": 102,
+            "shortName": "abaddon"
+          },
+          {
+            "id": 103,
+            "shortName": "elder_titan"
+          },
+          {
+            "id": 104,
+            "shortName": "legion_commander"
+          },
+          {
+            "id": 105,
+            "shortName": "techies"
+          },
+          {
+            "id": 106,
+            "shortName": "ember_spirit"
+          },
+          {
+            "id": 107,
+            "shortName": "earth_spirit"
+          },
+          {
+            "id": 108,
+            "shortName": "abyssal_underlord"
+          },
+          {
+            "id": 109,
+            "shortName": "terrorblade"
+          },
+          {
+            "id": 110,
+            "shortName": "phoenix"
+          },
+          {
+            "id": 111,
+            "shortName": "oracle"
+          },
+          {
+            "id": 112,
+            "shortName": "winter_wyvern"
+          },
+          {
+            "id": 113,
+            "shortName": "arc_warden"
+          },
+          {
+            "id": 114,
+            "shortName": "monkey_king"
+          },
+          {
+            "id": 119,
+            "shortName": "dark_willow"
+          },
+          {
+            "id": 120,
+            "shortName": "pangolier"
+          },
+          {
+            "id": 121,
+            "shortName": "grimstroke"
+          },
+          {
+            "id": 123,
+            "shortName": "hoodwink"
+          },
+          {
+            "id": 126,
+            "shortName": "void_spirit"
+          },
+          {
+            "id": 128,
+            "shortName": "snapfire"
+          },
+          {
+            "id": 129,
+            "shortName": "mars"
+          },
+          {
+            "id": 135,
+            "shortName": "dawnbreaker"
+          },
+          {
+            "id": 136,
+            "shortName": "marci"
+          },
+          {
+            "id": 137,
+            "shortName": "primal_beast"
+          },
+          {
+            "id": 138,
+            "shortName": "muerta"
+          }
+        ]
+      }
+    }
+  }
