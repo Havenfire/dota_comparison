@@ -6,7 +6,8 @@ def main():
     print("Starting Program")
     # print(util.get_popular_players())
 
-    print(util.popular_players_past_games(10))
+    # print(util.popular_players_past_games(10))
+    print(util.get_last_games_hero(1131498310, 5))
 
 
     # util.generate_training_data()

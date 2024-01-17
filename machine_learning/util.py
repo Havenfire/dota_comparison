@@ -200,13 +200,13 @@ def get_popular_players():
 
         # Store the list of player numbers and names as JSON
         with open('pp_list.json', 'w') as json_file:
-            json.dump(data, json_file)
+            json.dump(data, json_file, indent=4)
 
         return player_info
     else:
         print("Failed to retrieve the webpage. Status code:", response.status_code)
 
-def get_last_games(player_id, num_games):
+def get_last_games_detailed(player_id, num_games):
     print(f"Getting info for player: {player_id}")
     match_id_query = """
     query PlayerMatchesSummary($request: PlayerMatchesRequestType!, $steamId: Long!) {
@@ -291,6 +291,39 @@ def get_last_games(player_id, num_games):
     except requests.exceptions.RequestException as e:
         return f"Error: {e}"
     
+def get_last_games_hero(player_id, num_games):
+    print(f"Getting info for player: {player_id}")
+    match_id_query =  """
+    query PlayerMatchesHeroSummary($request: PlayerMatchesRequestType!, $steamId: Long!) {
+        player(steamAccountId: $steamId) {
+            steamAccountId
+            matches(request: $request) {
+      			id
+                players(steamAccountId: $steamId) {
+                    heroId
+                }
+            }
+        }
+    }
+    """
+
+    variables = {
+        "steamId": player_id,
+        "request": {"skip": 0, "take": num_games}
+    }
+
+    req_data = {"query": match_id_query, "variables": variables}
+
+    try:
+        response = requests.post(API_URL, headers=HEADERS, json=req_data)  # Use json parameter instead of data for JSON payload
+        response.raise_for_status()  # Raise an HTTPError for bad responses
+        data = response.json()
+    except requests.exceptions.RequestException as e:
+        return f"Error: {e}"
+    
+    with open('pp_data_hero.json', 'w') as json_file:
+        json.dump(data, json_file, indent=4)
+    
 
 def popular_players_past_games(num_games):
     with open('pp_list.json', 'r') as file:
@@ -304,7 +337,7 @@ def popular_players_past_games(num_games):
     limit = 10
     for p_id in pp_dict["players"]:
         print(p_id)
-        all_player_data[p_id["id"]] = get_last_games(player_id=p_id["id"], num_games=num_games)
+        all_player_data[p_id["id"]] = get_last_games_hero(player_id=p_id["id"], num_games=num_games)
         limit -= 1
         if limit < 0:
             break
@@ -312,6 +345,6 @@ def popular_players_past_games(num_games):
         time.sleep(seconds_per_call)
 
     with open('pp_data_detailed.json', 'w') as json_file:
-            json.dump(all_player_data, json_file)
+            json.dump(all_player_data, json_file, indent=4)
 
     
