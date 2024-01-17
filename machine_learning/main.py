@@ -4,8 +4,10 @@ import util as util
 def main():
 
     print("Starting Program")
+    # print(util.get_popular_players())
 
-    print(util.get_last_games(1131498310))
+    print(util.popular_players_past_games(10))
+
 
     # util.generate_training_data()
     # EMB_calculator = HeroSimilarityCalculatorEMB()

@@ -4,6 +4,8 @@ import json
 import csv
 import pandas as pd
 from bs4 import BeautifulSoup
+import time
+
 
 API_URL = "https://api.stratz.com/graphql"
 
@@ -179,20 +181,32 @@ def get_popular_players():
         html_content = response.text
         soup = BeautifulSoup(html_content, 'html.parser')
 
-        # Extract player numbers as integers
-        player_numbers = [int(link['href'].split("/")[-1]) for link in soup.find_all('a', href=lambda href: href and "/players/" in href and href.split("/")[-1].isdigit())]
+        # Extract player numbers as integers and their shown names
+        player_info = [{'id': int(link['href'].split("/")[-1]), 'name': link.text} for link in soup.find_all('a', href=lambda href: href and "/players/" in href and href.split("/")[-1].isdigit())]
 
-        data = {'player_ids': player_numbers}
+        data = {'players': player_info}
 
-        # Store the list of player numbers as JSON
-        with open('popular_players.json', 'w') as json_file:
+        unique_named_ids = set()
+        filtered_players = []
+        for player in data["players"]:
+            player_id = player["id"]
+            player_name = player["name"]
+            
+            if player_name != "" and player_id not in unique_named_ids:
+                filtered_players.append(player)
+                unique_named_ids.add(player_id)
+
+        data["players"] = filtered_players
+
+        # Store the list of player numbers and names as JSON
+        with open('pp_list.json', 'w') as json_file:
             json.dump(data, json_file)
 
-        return player_numbers
+        return player_info
     else:
         print("Failed to retrieve the webpage. Status code:", response.status_code)
 
-def get_last_games(player_id):
+def get_last_games(player_id, num_games):
     print(f"Getting info for player: {player_id}")
     match_id_query = """
     query PlayerMatchesSummary($request: PlayerMatchesRequestType!, $steamId: Long!) {
@@ -264,7 +278,7 @@ def get_last_games(player_id):
 
     variables = {
         "steamId": player_id,
-        "request": {"skip": 0, "take": 40}
+        "request": {"skip": 0, "take": num_games}
     }
 
     req_data = {"query": match_id_query, "variables": variables}
@@ -276,3 +290,28 @@ def get_last_games(player_id):
         return data
     except requests.exceptions.RequestException as e:
         return f"Error: {e}"
+    
+
+def popular_players_past_games(num_games):
+    with open('pp_list.json', 'r') as file:
+        pp_dict = json.load(file)
+    
+    # Set the desired rate of API calls (200 calls per minute)
+    calls_per_minute = 200
+    seconds_per_call = 60 / calls_per_minute
+
+    all_player_data = {}
+    limit = 10
+    for p_id in pp_dict["players"]:
+        print(p_id)
+        all_player_data[p_id["id"]] = get_last_games(player_id=p_id["id"], num_games=num_games)
+        limit -= 1
+        if limit < 0:
+            break
+        
+        time.sleep(seconds_per_call)
+
+    with open('pp_data_detailed.json', 'w') as json_file:
+            json.dump(all_player_data, json_file)
+
+    
