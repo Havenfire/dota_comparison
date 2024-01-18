@@ -344,11 +344,16 @@ def popular_players_past_games(num_games, num_players = 10):
             break
     
     print("Writing to file")
+
+    processed_data = {}
     
-    for match in all_player_data[p_id["id"]]["m_id"]:
-        all_player_data[p_id["id"]] = match["players"][0]["heroId"]
+    for player_id in all_player_data:
+        processed_data[player_id] = []
+
+        for match in all_player_data[player_id]["m_id"]:
+            processed_data[player_id].append(match["players"][0]["heroId"])
 
     with open('pp_data_hero.json', 'w') as json_file:
-            json.dump(all_player_data, json_file, indent=4)
+            json.dump(processed_data, json_file, indent=4)
 
     
