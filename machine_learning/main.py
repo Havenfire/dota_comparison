@@ -6,9 +6,8 @@ def main():
     print("Starting Program")
     # print(util.get_popular_players())
 
-    util.popular_players_past_games(num_games=5, num_players = 2)
+    util.popular_players_past_games(num_games=100, num_players = 200)
     # print(util.get_last_games_hero(1131498310, 5))
-
 
     # util.generate_training_data()
     # EMB_calculator = HeroSimilarityCalculatorEMB()

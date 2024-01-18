@@ -291,6 +291,7 @@ def get_last_matches_detailed(player_id, num_games):
     except requests.exceptions.RequestException as e:
         return f"Error: {e}"
     
+#GETTING API LIMITED
 def get_last_matches_hero(player_id, num_games):
     print(f"Getting info for player: {player_id}")
     match_id_query =  """
@@ -325,7 +326,7 @@ def get_last_matches_hero(player_id, num_games):
     return match_data
     
 
-def popular_players_past_games(num_games, num_players = 10):
+def popular_players_past_games(num_games = 100, num_players = 10):
     with open('pp_list.json', 'r') as file:
         pp_dict = json.load(file)
     
@@ -342,14 +343,12 @@ def popular_players_past_games(num_games, num_players = 10):
         limit += 1
         if limit >= num_players:
             break
-    
-    print("Writing to file")
+
 
     processed_data = {}
     
     for player_id in all_player_data:
         processed_data[player_id] = []
-
         for match in all_player_data[player_id]["m_id"]:
             processed_data[player_id].append(match["players"][0]["heroId"])
 
