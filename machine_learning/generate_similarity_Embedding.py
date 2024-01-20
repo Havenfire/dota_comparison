@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
 
-from similarity_measures import cosine_similarity, euclidean_distance, manhattan_distance
+from ml_util import cosine_similarity, euclidean_distance, manhattan_distance
 import torch
 import torch.nn as nn
 import torch.optim as optim

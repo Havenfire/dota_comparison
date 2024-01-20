@@ -36,7 +36,6 @@ def generate_training_data():
             deaths
             assists
             networth
-            goldPerMinute
             xp
             cs
             dn
@@ -81,8 +80,6 @@ def generate_training_data():
     
     }
     """
-
-    print(hero_query)
 
     r = requests.post(API_URL, json={"query":hero_query}, headers=HEADERS)
     data = r.json()
@@ -355,4 +352,3 @@ def popular_players_past_games(num_games = 100, num_players = 10):
     with open('pp_data_hero.json', 'w') as json_file:
             json.dump(processed_data, json_file, indent=4)
 
-    

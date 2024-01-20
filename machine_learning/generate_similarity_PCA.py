@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn.decomposition import PCA
-from similarity_measures import cosine_similarity, euclidean_distance, manhattan_distance
+from ml_util import cosine_similarity, euclidean_distance, manhattan_distance
 
 class HeroSimilarityCalculatorPCA:
     def __init__(self, csv_file_path='hero_data.csv', n_components=10):
@@ -14,6 +14,10 @@ class HeroSimilarityCalculatorPCA:
         # Perform PCA
         self.pca = PCA(n_components=n_components)
         self.heroes_embeddings = self.pca.fit_transform(data_for_pca)
+
+        # Save embeddings to a file
+        print("Saving PCA_embeddings")
+        np.save('embeddings_PCA.npy', self.heroes_embeddings)
 
     def get_hero_embedding(self, hero_id):
         index = self.df.index[self.df['heroId'] == hero_id].tolist()[0]

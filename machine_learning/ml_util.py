@@ -14,4 +14,3 @@ def euclidean_distance(embedding1, embedding2):
 def manhattan_distance(embedding1, embedding2):
     distance = np.sum(np.abs(embedding1 - embedding2))
     return distance
-
