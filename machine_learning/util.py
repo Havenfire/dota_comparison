@@ -322,6 +322,45 @@ def get_last_matches_hero(player_id, num_games):
     match_data["m_id"] = data["data"]["player"]["matches"]
     return match_data
     
+def get_last_matches_hero_noob(player_id, num_games):
+    print(f"Getting info for player: {player_id}")
+    match_id_query =  """
+    query PlayerMatchesHeroSummary($request: PlayerMatchesRequestType!, $steamId: Long!) {
+        player(steamAccountId: $steamId) {
+            matches(request: $request) {
+      			id
+                players(steamAccountId: $steamId) {
+                    heroId
+                }
+            }
+        }
+    }
+    """
+
+    variables = {
+        "steamId": player_id,
+        "request": {"skip": 0, "take": num_games}
+    }
+
+    req_data = {"query": match_id_query, "variables": variables}
+
+    try:
+        response = requests.post(API_URL, headers=HEADERS, json=req_data)  # Use json parameter instead of data for JSON payload
+        response.raise_for_status()  # Raise an HTTPError for bad responses
+        data = response.json()
+    except requests.exceptions.RequestException as e:
+        return f"Error: {e}"
+
+    match_data = {}
+    match_data["m_id"] = data["data"]["player"]["matches"]
+
+    
+    processed_data = []
+    for match in match_data["m_id"]:
+        processed_data.append(match["players"][0]["heroId"])
+
+    return processed_data
+    
 
 def popular_players_past_games(num_games = 100, num_players = 10):
     with open('pp_list.json', 'r') as file:

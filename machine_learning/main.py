@@ -1,27 +1,15 @@
 # from generate_similarity_Embedding import HeroSimilarityCalculatorEMB
 from generate_similarity_PCA import HeroSimilarityCalculatorPCA
+from ml_util import cosine_similarity
 import util as util
+import ml
 
 def main():
 
     print("Starting Program")
-    # print(util.get_popular_players())
+    print(ml.find_all_pro_similarity(1131498310))
 
-    # util.popular_players_past_games(num_games=100, num_players = 200)
+
     
-    util.generate_training_data()
-    # EMB_calculator = HeroSimilarityCalculatorEMB()
-    PCA_calculator = HeroSimilarityCalculatorPCA()
-
-    hero1_id = 41
-    hero2_id = 44
-
-    similarity_measure = 'cosine'
-    # EMB_similarity = EMB_calculator.calculate_similarity(hero1_id, hero2_id,  'cosine')
-    PCA_similarity = PCA_calculator.calculate_similarity(hero1_id, hero2_id,  'cosine')
-
-    # print(f"EMB Similarity: {hero1_id} and {hero2_id} using {similarity_measure} similarity: {EMB_similarity}")
-    print(f"PCA Similarity: {hero1_id} and {hero2_id} using {similarity_measure} similarity: {PCA_similarity}")
-
 if __name__ == "__main__":
     main()
