@@ -26,17 +26,17 @@ class HeroSimilarityCalculatorPCA:
         embedding1 = self.get_hero_embedding(hero1_id)
         embedding2 = self.get_hero_embedding(hero2_id)
 
-        match similarity:
+        match similarity_measure:
             case "cosine":
-                similarity = cosine_similarity(embedding1, embedding2)
+                similarity_measure = cosine_similarity(embedding1, embedding2)
             case "euclidean":
-                similarity = euclidean_distance(embedding1, embedding2)
+                similarity_measure = euclidean_distance(embedding1, embedding2)
             case "manhattan":
-                similarity = manhattan_distance(embedding1, embedding2)
+                similarity_measure = manhattan_distance(embedding1, embedding2)
             case _:
                 raise ValueError(f"Invalid similarity measure: {similarity_measure}")
 
-        return similarity
+        return similarity_measure
     
         
     def get_hero_similarity_matrix(self):
