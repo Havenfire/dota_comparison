@@ -44,7 +44,16 @@ def find_all_pro_similarity(pid_noob):
 
     sorted_list = sorted(similarity_arr, key=lambda x: x['similarity_score'], reverse=True)
 
-    return sorted_list
+    mini_list = sorted_list[:5]
+    sorted_mini_list = []
+    result_dict = {item['id']: item['name'] for item in pp_list}
+    for val in mini_list:
+        pid = val['id']
+        player_name = result_dict[pid]
+        sorted_mini_list.append({pid: {"similarity_score": val['similarity_score'], "name": player_name}})
+
+    return sorted_mini_list
+
     
 # def sim_algo1(pid_1_list, pid_2_list):
 #     calc = PCA.HeroSimilarityCalculatorPCA()

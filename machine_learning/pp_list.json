@@ -1,1 +1,972 @@
-{"players": [{"id": 321580662, "name": "TSpirit.Yatoro"}, {"id": 86745912, "name": "SR.Arteezy"}, {"id": 73562326, "name": "Liquid.zai"}, {"id": 94054712, "name": "Topson"}, {"id": 302214028, "name": "TSpirit.Collapse"}, {"id": 25907144, "name": "SR.Cr1t-"}, {"id": 171262902, "name": "Entity.\u533b\u8005watson`"}, {"id": 858106446, "name": "9Pandas.kiyotaka"}, {"id": 106863163, "name": "AR.Somnus"}, {"id": 101695162, "name": "AR.fy"}, {"id": 116934015, "name": "GG.DyrachYO"}, {"id": 221666230, "name": "GG.Quinn"}, {"id": 132851371, "name": "9Pandas.RAMZES666"}, {"id": 124801257, "name": "BetBoom.Nightfall"}, {"id": 331855530, "name": "BetBoom.Pure~"}, {"id": 86698277, "name": "Tundra.33"}, {"id": 165564598, "name": "9Pandas.MieRo`"}, {"id": 154715080, "name": "SR.Abed"}, {"id": 106305042, "name": "TSpirit.Larl"}, {"id": 480412663, "name": "BetBoom.gpk~"}, {"id": 317880638, "name": "BetBoom.Save-"}, {"id": 34505203, "name": "NGX.mc"}, {"id": 94155156, "name": "SR.Fly"}, {"id": 134556694, "name": "9Pandas.Solo"}, {"id": 172099728, "name": "VP.Kiritych~"}, {"id": 94049589, "name": "VP.Fng"}, {"id": 106573901, "name": "No[o]ne-"}, {"id": 173978074, "name": "PSG.LGD.NothingToSay"}, {"id": 113331514, "name": "TSpirit.Miposhka"}, {"id": 256156323, "name": "TSpirit.Mira"}, {"id": 97590558, "name": "GG.Ace \u2660"}, {"id": 375507918, "name": "TLN.23"}, {"id": 10366616, "name": "Tundra.Sneyking"}, {"id": 94786276, "name": "Tundra.Nine"}, {"id": 84429681, "name": "NOUNS.Moo"}, {"id": 94738847, "name": "AR.chalice"}, {"id": 126238768, "name": "NOUNS.Gunnar"}, {"id": 431770905, "name": "BetBoom.TORONTOTOKYO"}, {"id": 97658618, "name": "TSM.Timado"}, {"id": 320252024, "name": "PSG.LGD.shiro"}, {"id": 292921272, "name": "EG.Wisper"}, {"id": 185908355, "name": "AR.Lou"}, {"id": 136829091, "name": "TSM.Whitemon"}, {"id": 126212866, "name": "SR.SaberLight"}, {"id": 158847773, "name": "AR.\u5929\u547d"}, {"id": 201358612, "name": "Liquid.Nisha"}, {"id": 16497807, "name": "GG.tOfu"}, {"id": 54580962, "name": "Liquid.iNSaNiA"}, {"id": 1171243748, "name": "bc.JimPark"}, {"id": 152962063, "name": "Liquid.miCKe"}, {"id": 153836240, "name": "EG.C.smile <"}, {"id": 184620877, "name": "TSM.kasane"}, {"id": 100058342, "name": "Tundra.skiter"}, {"id": 346412363, "name": "TSM.Ari"}, {"id": 81475303, "name": "NOUNS.Yamsun"}, {"id": 111114687, "name": "PSG.LGD.y`"}, {"id": 96803083, "name": "Entity.Stormstormer"}, {"id": 77490514, "name": "Liquid.Boxi"}, {"id": 117089283, "name": "EG.Panda"}, {"id": 91730177, "name": "GG.Seleri"}, {"id": 161839895, "name": "9Pandas.Antares"}, {"id": 123023873, "name": "VP.squad1x"}, {"id": 127565532, "name": "Entity.Fishman"}, {"id": 164685175, "name": "NOUNS.K1 Hector"}, {"id": 96183976, "name": "Quest.TA2000"}, {"id": 152545459, "name": "Entity.Gabbi"}, {"id": 87063175, "name": "NOUNS.LESL\u00c3O"}, {"id": 86822085, "name": "SG.Costabile"}, {"id": 157989498, "name": "bc.Scofield"}, {"id": 195108598, "name": "VP.Noticed"}, {"id": 145065875, "name": "VP.sayuw"}, {"id": 301750126, "name": "TLN.Mikoto"}, {"id": 408729743, "name": "bc.Sacred"}, {"id": 238239590, "name": "TSM.Bryle"}, {"id": 339235645, "name": "EG.Pakazs"}, {"id": 140297552, "name": "Quest.No!ob\u2122"}, {"id": 150961567, "name": "PSG.LGD.planet"}, {"id": 352545711, "name": "bc.DarkMago\u2661"}, {"id": 145957968, "name": "PSG.LGD.niu"}, {"id": 193815691, "name": "TLN.Q"}, {"id": 155332459, "name": "EG.Matthew"}, {"id": 100471531, "name": "TLN.Jabz"}, {"id": 196878136, "name": "Entity.Kataomi`"}, {"id": 81306398, "name": "KJ"}, {"id": 119631156, "name": "bc.stingeR"}, {"id": 152168157, "name": "Quest.OmaR"}, {"id": 320219866, "name": "Quest.kaori"}, {"id": 101259972, "name": "TLN.Oli~"}, {"id": 87196890, "name": "1437"}, {"id": 35960687, "name": "2GD"}, {"id": 92423451, "name": "9pasha"}, {"id": 18180970, "name": "Alliance.Handsken"}, {"id": 12231202, "name": "Alliance.Limmp"}, {"id": 119464562, "name": "Alliance.Loda"}, {"id": 412753955, "name": "Alliance.Nikobaby"}, {"id": 41231571, "name": "Alliance.s4"}, {"id": 123051238, "name": "ALOHADANCE"}, {"id": 91064780, "name": "ALWAYSWANNAFLY"}, {"id": 183719386, "name": "AMMAR_THE_F"}, {"id": 311360822, "name": "ana"}, {"id": 107644273, "name": "Ars-Art"}, {"id": 207829314, "name": "Aster.Borax"}, {"id": 90892734, "name": "Aster.BurNIng"}, {"id": 139876032, "name": "Aster.Kaka"}, {"id": 89423756, "name": "Aster.LaNm"}, {"id": 148215639, "name": "Aster.Monet"}, {"id": 111620041, "name": "Aster.Suma1L-"}, {"id": 129958758, "name": "Aster.Xxs"}, {"id": 183378746, "name": "Aster.\u76ae\u7403"}, {"id": 40547474, "name": "Aui_2000"}, {"id": 105178768, "name": "BananaSlamJamma"}, {"id": 125845797, "name": "Beastcoast.Valqui"}, {"id": 21289303, "name": "Black^"}, {"id": 106781506, "name": "Blitz"}, {"id": 190826739, "name": "BOOM"}, {"id": 392565237, "name": "BOOM.JACKBOYS"}, {"id": 89871557, "name": "BOOM.Mushi"}, {"id": 100594231, "name": "BOOM.skem"}, {"id": 155494381, "name": "BOOM.TIMS"}, {"id": 324277900, "name": "BOOM.Yopaj-"}, {"id": 88271237, "name": "Ceb"}, {"id": 88553213, "name": "ChuaN"}, {"id": 113435203, "name": "ChYuaN"}, {"id": 177411785, "name": "Daxak"}, {"id": 51503282, "name": "Day9tv"}, {"id": 690740, "name": "DC | @SUNSfanTV"}, {"id": 85805514, "name": "DeMoN"}, {"id": 70388657, "name": "Dendi"}, {"id": 99983413, "name": "Deth"}, {"id": 94338967, "name": "DkPhobos"}, {"id": 58380135, "name": "DotaCapitalist"}, {"id": 161444478, "name": "Draskyl"}, {"id": 89782335, "name": "Dread"}, {"id": 30237211, "name": "EG.BuLba"}, {"id": 3916428, "name": "EGM"}, {"id": 90882159, "name": "Elephant.Super\uff01"}, {"id": 196628643, "name": "Ephey"}, {"id": 43276219, "name": "EternaLEnVy"}, {"id": 112377459, "name": "Febby"}, {"id": 113800818, "name": "Fenrir"}, {"id": 88585077, "name": "Ferrari_430"}, {"id": 102099826, "name": "Fnatic.Dj"}, {"id": 132309493, "name": "Fnatic.Raven"}, {"id": 32936165, "name": "Fnatic.SunBhie"}, {"id": 88933594, "name": "Forev"}, {"id": 42493875, "name": "Fwosh"}, {"id": 68243195, "name": "Gareth"}, {"id": 89137399, "name": "Goblak"}, {"id": 76995948, "name": "GoDZ"}, {"id": 56939869, "name": "Gorgc"}, {"id": 84772440, "name": "iceiceice"}, {"id": 202217968, "name": "iG.Emo"}, {"id": 168028715, "name": "iG.FlyFly"}, {"id": 113995822, "name": "iLTW"}, {"id": 77415789, "name": "Inmate"}, {"id": 86715129, "name": "ixmike88"}, {"id": 26771994, "name": "JerAx"}, {"id": 36547811, "name": "JotM"}, {"id": 91967054, "name": "KBBQ"}, {"id": 23553084, "name": "KotlGuy"}, {"id": 82262664, "name": "KuroKy"}, {"id": 49317728, "name": "Kyle"}, {"id": 145875, "name": "LD"}, {"id": 60943014, "name": "Liquid.Jabbz"}, {"id": 72312627, "name": "Liquid.MATUMBAMAN"}, {"id": 86738694, "name": "Liquid.qojqva"}, {"id": 47434686, "name": "LoA"}, {"id": 189892277, "name": "Logical"}, {"id": 193673646, "name": "Lyrical"}, {"id": 95430068, "name": "Madara"}, {"id": 3940262, "name": "March"}, {"id": 12196957, "name": "Maut"}, {"id": 67760037, "name": "Merlini"}, {"id": 105248644, "name": "Miracle-"}, {"id": 181866849, "name": "Moxxi"}, {"id": 203351055, "name": "NAVI.Malik"}, {"id": 101356886, "name": "NGX.GH"}, {"id": 93712171, "name": "NS"}, {"id": 89511038, "name": "ODPixel"}, {"id": 93618577, "name": "OG.bzm"}, {"id": 56351509, "name": "OG.DM"}, {"id": 90125566, "name": "OG.Misha"}, {"id": 19672354, "name": "OG.N0tail"}, {"id": 401792574, "name": "OG.Taiga"}, {"id": 167976729, "name": "OG.Yuragi"}, {"id": 107803494, "name": "Ori"}, {"id": 86727555, "name": "PPD"}, {"id": 66296404, "name": "Purge"}, {"id": 86726887, "name": "QCY.MSS"}, {"id": 108452107, "name": "QCY.YS"}, {"id": 86725175, "name": "Resolut1on"}, {"id": 139822354, "name": "RNG.Setsu"}, {"id": 91698091, "name": "rOtk"}, {"id": 100883708, "name": "Sansheng"}, {"id": 164532005, "name": "Secret.Armel"}, {"id": 127617979, "name": "Secret.Crystallis"}, {"id": 156328257, "name": "Secret.Fbz"}, {"id": 105599955, "name": "Secret.Heen"}, {"id": 87278757, "name": "Secret.Puppey"}, {"id": 9403474, "name": "Secret.yamich"}, {"id": 85937380, "name": "SG.4dr"}, {"id": 117956848, "name": "SG.tavo"}, {"id": 105045291, "name": "SG.Thiolicor"}, {"id": 226583, "name": "Shane"}, {"id": 37147003, "name": "Sheever"}, {"id": 19757254, "name": "SingSing"}, {"id": 68186278, "name": "SirActionSlacks"}, {"id": 117421467, "name": "StoRm.SoNNeikO"}, {"id": 108382060, "name": "Sylar"}, {"id": 4281729, "name": "syndereN"}, {"id": 94281932, "name": "T1.Karl"}, {"id": 184950344, "name": "T1.Kuku"}, {"id": 121404228, "name": "T1.Xepher"}, {"id": 59457413, "name": "@TheMaelk"}, {"id": 132379908, "name": "ThunderP.Vintage"}, {"id": 70090192, "name": "TrentPax"}, {"id": 145550466, "name": "TSM FTX.DuBu"}, {"id": 87382579, "name": "TSM FTX.Misery"}, {"id": 38628747, "name": "TSM FTX.MoonMeander"}, {"id": 89269794, "name": "TSpirit.Silent"}, {"id": 103735745, "name": "Tundra.Saksa"}, {"id": 277141004, "name": "VG.poyoyo"}, {"id": 139937922, "name": "VG.Yang"}, {"id": 32995405, "name": "@WagaGaming"}, {"id": 373520478, "name": "White\u4e36Album_\u767d\u5b66\u5bb6"}, {"id": 86762037, "name": "WinteR"}, {"id": 89625472, "name": "XBOCT"}, {"id": 173378701, "name": "XctN.Bob"}, {"id": 156029808, "name": "XctN.Carlo"}, {"id": 389022189, "name": "XctN.Palos"}, {"id": 399862798, "name": "XctN.Shanks"}, {"id": 337575662, "name": "XctN.Tino"}, {"id": 143693439, "name": "XG.Dy"}, {"id": 206642367, "name": "XG.Ghost"}, {"id": 138857296, "name": "XG.JT-"}, {"id": 134276083, "name": "XG.old eLeVeN"}, {"id": 137193239, "name": "XG.Paparazi\u706c"}, {"id": 138543123, "name": "XG.Pyw"}, {"id": 157475523, "name": "XG.XinQ"}, {"id": 98887913, "name": "xiao8"}, {"id": 89117038, "name": "YapzOr"}, {"id": 88990397, "name": "Zyori"}]}
+{
+    "players": [
+        {
+            "id": 321580662,
+            "name": "TSpirit.Yatoro"
+        },
+        {
+            "id": 86745912,
+            "name": "SR.Arteezy"
+        },
+        {
+            "id": 73562326,
+            "name": "Liquid.zai"
+        },
+        {
+            "id": 94054712,
+            "name": "Topson"
+        },
+        {
+            "id": 302214028,
+            "name": "TSpirit.Collapse"
+        },
+        {
+            "id": 25907144,
+            "name": "SR.Cr1t-"
+        },
+        {
+            "id": 171262902,
+            "name": "Entity.\u533b\u8005watson`"
+        },
+        {
+            "id": 858106446,
+            "name": "9Pandas.kiyotaka"
+        },
+        {
+            "id": 106863163,
+            "name": "AR.Somnus"
+        },
+        {
+            "id": 101695162,
+            "name": "AR.fy"
+        },
+        {
+            "id": 116934015,
+            "name": "GG.DyrachYO"
+        },
+        {
+            "id": 221666230,
+            "name": "GG.Quinn"
+        },
+        {
+            "id": 132851371,
+            "name": "9Pandas.RAMZES666"
+        },
+        {
+            "id": 124801257,
+            "name": "BetBoom.Nightfall"
+        },
+        {
+            "id": 331855530,
+            "name": "BetBoom.Pure~"
+        },
+        {
+            "id": 86698277,
+            "name": "Tundra.33"
+        },
+        {
+            "id": 165564598,
+            "name": "9Pandas.MieRo`"
+        },
+        {
+            "id": 154715080,
+            "name": "SR.Abed"
+        },
+        {
+            "id": 106305042,
+            "name": "TSpirit.Larl"
+        },
+        {
+            "id": 480412663,
+            "name": "BetBoom.gpk~"
+        },
+        {
+            "id": 317880638,
+            "name": "BetBoom.Save-"
+        },
+        {
+            "id": 34505203,
+            "name": "NGX.mc"
+        },
+        {
+            "id": 94155156,
+            "name": "SR.Fly"
+        },
+        {
+            "id": 134556694,
+            "name": "9Pandas.Solo"
+        },
+        {
+            "id": 172099728,
+            "name": "VP.Kiritych~"
+        },
+        {
+            "id": 94049589,
+            "name": "VP.Fng"
+        },
+        {
+            "id": 106573901,
+            "name": "No[o]ne-"
+        },
+        {
+            "id": 173978074,
+            "name": "PSG.LGD.NothingToSay"
+        },
+        {
+            "id": 113331514,
+            "name": "TSpirit.Miposhka"
+        },
+        {
+            "id": 256156323,
+            "name": "TSpirit.Mira"
+        },
+        {
+            "id": 97590558,
+            "name": "GG.Ace \u2660"
+        },
+        {
+            "id": 375507918,
+            "name": "TLN.23"
+        },
+        {
+            "id": 10366616,
+            "name": "Tundra.Sneyking"
+        },
+        {
+            "id": 94786276,
+            "name": "Tundra.Nine"
+        },
+        {
+            "id": 84429681,
+            "name": "NOUNS.Moo"
+        },
+        {
+            "id": 94738847,
+            "name": "AR.chalice"
+        },
+        {
+            "id": 126238768,
+            "name": "NOUNS.Gunnar"
+        },
+        {
+            "id": 431770905,
+            "name": "BetBoom.TORONTOTOKYO"
+        },
+        {
+            "id": 97658618,
+            "name": "TSM.Timado"
+        },
+        {
+            "id": 320252024,
+            "name": "PSG.LGD.shiro"
+        },
+        {
+            "id": 292921272,
+            "name": "EG.Wisper"
+        },
+        {
+            "id": 185908355,
+            "name": "AR.Lou"
+        },
+        {
+            "id": 136829091,
+            "name": "TSM.Whitemon"
+        },
+        {
+            "id": 126212866,
+            "name": "SR.SaberLight"
+        },
+        {
+            "id": 158847773,
+            "name": "AR.\u5929\u547d"
+        },
+        {
+            "id": 201358612,
+            "name": "Liquid.Nisha"
+        },
+        {
+            "id": 16497807,
+            "name": "GG.tOfu"
+        },
+        {
+            "id": 54580962,
+            "name": "Liquid.iNSaNiA"
+        },
+        {
+            "id": 1171243748,
+            "name": "bc.JimPark"
+        },
+        {
+            "id": 152962063,
+            "name": "Liquid.miCKe"
+        },
+        {
+            "id": 153836240,
+            "name": "EG.C.smile <"
+        },
+        {
+            "id": 184620877,
+            "name": "TSM.kasane"
+        },
+        {
+            "id": 100058342,
+            "name": "Tundra.skiter"
+        },
+        {
+            "id": 346412363,
+            "name": "TSM.Ari"
+        },
+        {
+            "id": 81475303,
+            "name": "NOUNS.Yamsun"
+        },
+        {
+            "id": 111114687,
+            "name": "PSG.LGD.y`"
+        },
+        {
+            "id": 96803083,
+            "name": "Entity.Stormstormer"
+        },
+        {
+            "id": 77490514,
+            "name": "Liquid.Boxi"
+        },
+        {
+            "id": 117089283,
+            "name": "EG.Panda"
+        },
+        {
+            "id": 91730177,
+            "name": "GG.Seleri"
+        },
+        {
+            "id": 161839895,
+            "name": "9Pandas.Antares"
+        },
+        {
+            "id": 123023873,
+            "name": "VP.squad1x"
+        },
+        {
+            "id": 127565532,
+            "name": "Entity.Fishman"
+        },
+        {
+            "id": 164685175,
+            "name": "NOUNS.K1 Hector"
+        },
+        {
+            "id": 96183976,
+            "name": "Quest.TA2000"
+        },
+        {
+            "id": 152545459,
+            "name": "Entity.Gabbi"
+        },
+        {
+            "id": 87063175,
+            "name": "NOUNS.LESL\u00c3O"
+        },
+        {
+            "id": 86822085,
+            "name": "SG.Costabile"
+        },
+        {
+            "id": 157989498,
+            "name": "bc.Scofield"
+        },
+        {
+            "id": 195108598,
+            "name": "VP.Noticed"
+        },
+        {
+            "id": 145065875,
+            "name": "VP.sayuw"
+        },
+        {
+            "id": 301750126,
+            "name": "TLN.Mikoto"
+        },
+        {
+            "id": 408729743,
+            "name": "bc.Sacred"
+        },
+        {
+            "id": 238239590,
+            "name": "TSM.Bryle"
+        },
+        {
+            "id": 339235645,
+            "name": "EG.Pakazs"
+        },
+        {
+            "id": 140297552,
+            "name": "Quest.No!ob\u2122"
+        },
+        {
+            "id": 150961567,
+            "name": "PSG.LGD.planet"
+        },
+        {
+            "id": 352545711,
+            "name": "bc.DarkMago\u2661"
+        },
+        {
+            "id": 145957968,
+            "name": "PSG.LGD.niu"
+        },
+        {
+            "id": 193815691,
+            "name": "TLN.Q"
+        },
+        {
+            "id": 155332459,
+            "name": "EG.Matthew"
+        },
+        {
+            "id": 100471531,
+            "name": "TLN.Jabz"
+        },
+        {
+            "id": 196878136,
+            "name": "Entity.Kataomi`"
+        },
+        {
+            "id": 81306398,
+            "name": "KJ"
+        },
+        {
+            "id": 119631156,
+            "name": "bc.stingeR"
+        },
+        {
+            "id": 152168157,
+            "name": "Quest.OmaR"
+        },
+        {
+            "id": 320219866,
+            "name": "Quest.kaori"
+        },
+        {
+            "id": 101259972,
+            "name": "TLN.Oli~"
+        },
+        {
+            "id": 87196890,
+            "name": "1437"
+        },
+        {
+            "id": 35960687,
+            "name": "2GD"
+        },
+        {
+            "id": 92423451,
+            "name": "9pasha"
+        },
+        {
+            "id": 18180970,
+            "name": "Alliance.Handsken"
+        },
+        {
+            "id": 12231202,
+            "name": "Alliance.Limmp"
+        },
+        {
+            "id": 119464562,
+            "name": "Alliance.Loda"
+        },
+        {
+            "id": 412753955,
+            "name": "Alliance.Nikobaby"
+        },
+        {
+            "id": 41231571,
+            "name": "Alliance.s4"
+        },
+        {
+            "id": 123051238,
+            "name": "ALOHADANCE"
+        },
+        {
+            "id": 91064780,
+            "name": "ALWAYSWANNAFLY"
+        },
+        {
+            "id": 183719386,
+            "name": "AMMAR_THE_F"
+        },
+        {
+            "id": 311360822,
+            "name": "ana"
+        },
+        {
+            "id": 107644273,
+            "name": "Ars-Art"
+        },
+        {
+            "id": 207829314,
+            "name": "Aster.Borax"
+        },
+        {
+            "id": 90892734,
+            "name": "Aster.BurNIng"
+        },
+        {
+            "id": 139876032,
+            "name": "Aster.Kaka"
+        },
+        {
+            "id": 89423756,
+            "name": "Aster.LaNm"
+        },
+        {
+            "id": 148215639,
+            "name": "Aster.Monet"
+        },
+        {
+            "id": 111620041,
+            "name": "Aster.Suma1L-"
+        },
+        {
+            "id": 129958758,
+            "name": "Aster.Xxs"
+        },
+        {
+            "id": 183378746,
+            "name": "Aster.\u76ae\u7403"
+        },
+        {
+            "id": 40547474,
+            "name": "Aui_2000"
+        },
+        {
+            "id": 105178768,
+            "name": "BananaSlamJamma"
+        },
+        {
+            "id": 125845797,
+            "name": "Beastcoast.Valqui"
+        },
+        {
+            "id": 21289303,
+            "name": "Black^"
+        },
+        {
+            "id": 106781506,
+            "name": "Blitz"
+        },
+        {
+            "id": 190826739,
+            "name": "BOOM"
+        },
+        {
+            "id": 392565237,
+            "name": "BOOM.JACKBOYS"
+        },
+        {
+            "id": 89871557,
+            "name": "BOOM.Mushi"
+        },
+        {
+            "id": 100594231,
+            "name": "BOOM.skem"
+        },
+        {
+            "id": 155494381,
+            "name": "BOOM.TIMS"
+        },
+        {
+            "id": 324277900,
+            "name": "BOOM.Yopaj-"
+        },
+        {
+            "id": 88271237,
+            "name": "Ceb"
+        },
+        {
+            "id": 88553213,
+            "name": "ChuaN"
+        },
+        {
+            "id": 113435203,
+            "name": "ChYuaN"
+        },
+        {
+            "id": 177411785,
+            "name": "Daxak"
+        },
+        {
+            "id": 51503282,
+            "name": "Day9tv"
+        },
+        {
+            "id": 690740,
+            "name": "DC | @SUNSfanTV"
+        },
+        {
+            "id": 85805514,
+            "name": "DeMoN"
+        },
+        {
+            "id": 70388657,
+            "name": "Dendi"
+        },
+        {
+            "id": 99983413,
+            "name": "Deth"
+        },
+        {
+            "id": 94338967,
+            "name": "DkPhobos"
+        },
+        {
+            "id": 58380135,
+            "name": "DotaCapitalist"
+        },
+        {
+            "id": 161444478,
+            "name": "Draskyl"
+        },
+        {
+            "id": 89782335,
+            "name": "Dread"
+        },
+        {
+            "id": 30237211,
+            "name": "EG.BuLba"
+        },
+        {
+            "id": 3916428,
+            "name": "EGM"
+        },
+        {
+            "id": 90882159,
+            "name": "Elephant.Super\uff01"
+        },
+        {
+            "id": 196628643,
+            "name": "Ephey"
+        },
+        {
+            "id": 43276219,
+            "name": "EternaLEnVy"
+        },
+        {
+            "id": 112377459,
+            "name": "Febby"
+        },
+        {
+            "id": 113800818,
+            "name": "Fenrir"
+        },
+        {
+            "id": 88585077,
+            "name": "Ferrari_430"
+        },
+        {
+            "id": 102099826,
+            "name": "Fnatic.Dj"
+        },
+        {
+            "id": 132309493,
+            "name": "Fnatic.Raven"
+        },
+        {
+            "id": 32936165,
+            "name": "Fnatic.SunBhie"
+        },
+        {
+            "id": 88933594,
+            "name": "Forev"
+        },
+        {
+            "id": 42493875,
+            "name": "Fwosh"
+        },
+        {
+            "id": 68243195,
+            "name": "Gareth"
+        },
+        {
+            "id": 89137399,
+            "name": "Goblak"
+        },
+        {
+            "id": 76995948,
+            "name": "GoDZ"
+        },
+        {
+            "id": 56939869,
+            "name": "Gorgc"
+        },
+        {
+            "id": 84772440,
+            "name": "iceiceice"
+        },
+        {
+            "id": 202217968,
+            "name": "iG.Emo"
+        },
+        {
+            "id": 168028715,
+            "name": "iG.FlyFly"
+        },
+        {
+            "id": 113995822,
+            "name": "iLTW"
+        },
+        {
+            "id": 77415789,
+            "name": "Inmate"
+        },
+        {
+            "id": 86715129,
+            "name": "ixmike88"
+        },
+        {
+            "id": 26771994,
+            "name": "JerAx"
+        },
+        {
+            "id": 36547811,
+            "name": "JotM"
+        },
+        {
+            "id": 91967054,
+            "name": "KBBQ"
+        },
+        {
+            "id": 23553084,
+            "name": "KotlGuy"
+        },
+        {
+            "id": 82262664,
+            "name": "KuroKy"
+        },
+        {
+            "id": 49317728,
+            "name": "Kyle"
+        },
+        {
+            "id": 145875,
+            "name": "LD"
+        },
+        {
+            "id": 60943014,
+            "name": "Liquid.Jabbz"
+        },
+        {
+            "id": 72312627,
+            "name": "Liquid.MATUMBAMAN"
+        },
+        {
+            "id": 86738694,
+            "name": "Liquid.qojqva"
+        },
+        {
+            "id": 47434686,
+            "name": "LoA"
+        },
+        {
+            "id": 189892277,
+            "name": "Logical"
+        },
+        {
+            "id": 193673646,
+            "name": "Lyrical"
+        },
+        {
+            "id": 95430068,
+            "name": "Madara"
+        },
+        {
+            "id": 3940262,
+            "name": "March"
+        },
+        {
+            "id": 12196957,
+            "name": "Maut"
+        },
+        {
+            "id": 67760037,
+            "name": "Merlini"
+        },
+        {
+            "id": 105248644,
+            "name": "Miracle-"
+        },
+        {
+            "id": 181866849,
+            "name": "Moxxi"
+        },
+        {
+            "id": 203351055,
+            "name": "NAVI.Malik"
+        },
+        {
+            "id": 101356886,
+            "name": "NGX.GH"
+        },
+        {
+            "id": 93712171,
+            "name": "NS"
+        },
+        {
+            "id": 89511038,
+            "name": "ODPixel"
+        },
+        {
+            "id": 93618577,
+            "name": "OG.bzm"
+        },
+        {
+            "id": 56351509,
+            "name": "OG.DM"
+        },
+        {
+            "id": 90125566,
+            "name": "OG.Misha"
+        },
+        {
+            "id": 19672354,
+            "name": "OG.N0tail"
+        },
+        {
+            "id": 401792574,
+            "name": "OG.Taiga"
+        },
+        {
+            "id": 167976729,
+            "name": "OG.Yuragi"
+        },
+        {
+            "id": 107803494,
+            "name": "Ori"
+        },
+        {
+            "id": 86727555,
+            "name": "PPD"
+        },
+        {
+            "id": 66296404,
+            "name": "Purge"
+        },
+        {
+            "id": 86726887,
+            "name": "QCY.MSS"
+        },
+        {
+            "id": 108452107,
+            "name": "QCY.YS"
+        },
+        {
+            "id": 86725175,
+            "name": "Resolut1on"
+        },
+        {
+            "id": 139822354,
+            "name": "RNG.Setsu"
+        },
+        {
+            "id": 91698091,
+            "name": "rOtk"
+        },
+        {
+            "id": 100883708,
+            "name": "Sansheng"
+        },
+        {
+            "id": 164532005,
+            "name": "Secret.Armel"
+        },
+        {
+            "id": 127617979,
+            "name": "Secret.Crystallis"
+        },
+        {
+            "id": 156328257,
+            "name": "Secret.Fbz"
+        },
+        {
+            "id": 105599955,
+            "name": "Secret.Heen"
+        },
+        {
+            "id": 87278757,
+            "name": "Secret.Puppey"
+        },
+        {
+            "id": 9403474,
+            "name": "Secret.yamich"
+        },
+        {
+            "id": 85937380,
+            "name": "SG.4dr"
+        },
+        {
+            "id": 117956848,
+            "name": "SG.tavo"
+        },
+        {
+            "id": 105045291,
+            "name": "SG.Thiolicor"
+        },
+        {
+            "id": 226583,
+            "name": "Shane"
+        },
+        {
+            "id": 37147003,
+            "name": "Sheever"
+        },
+        {
+            "id": 19757254,
+            "name": "SingSing"
+        },
+        {
+            "id": 68186278,
+            "name": "SirActionSlacks"
+        },
+        {
+            "id": 117421467,
+            "name": "StoRm.SoNNeikO"
+        },
+        {
+            "id": 108382060,
+            "name": "Sylar"
+        },
+        {
+            "id": 4281729,
+            "name": "syndereN"
+        },
+        {
+            "id": 94281932,
+            "name": "T1.Karl"
+        },
+        {
+            "id": 184950344,
+            "name": "T1.Kuku"
+        },
+        {
+            "id": 121404228,
+            "name": "T1.Xepher"
+        },
+        {
+            "id": 59457413,
+            "name": "@TheMaelk"
+        },
+        {
+            "id": 132379908,
+            "name": "ThunderP.Vintage"
+        },
+        {
+            "id": 70090192,
+            "name": "TrentPax"
+        },
+        {
+            "id": 145550466,
+            "name": "TSM FTX.DuBu"
+        },
+        {
+            "id": 87382579,
+            "name": "TSM FTX.Misery"
+        },
+        {
+            "id": 38628747,
+            "name": "TSM FTX.MoonMeander"
+        },
+        {
+            "id": 89269794,
+            "name": "TSpirit.Silent"
+        },
+        {
+            "id": 103735745,
+            "name": "Tundra.Saksa"
+        },
+        {
+            "id": 277141004,
+            "name": "VG.poyoyo"
+        },
+        {
+            "id": 139937922,
+            "name": "VG.Yang"
+        },
+        {
+            "id": 32995405,
+            "name": "@WagaGaming"
+        },
+        {
+            "id": 373520478,
+            "name": "White\u4e36Album_\u767d\u5b66\u5bb6"
+        },
+        {
+            "id": 86762037,
+            "name": "WinteR"
+        },
+        {
+            "id": 89625472,
+            "name": "XBOCT"
+        },
+        {
+            "id": 173378701,
+            "name": "XctN.Bob"
+        },
+        {
+            "id": 156029808,
+            "name": "XctN.Carlo"
+        },
+        {
+            "id": 389022189,
+            "name": "XctN.Palos"
+        },
+        {
+            "id": 399862798,
+            "name": "XctN.Shanks"
+        },
+        {
+            "id": 337575662,
+            "name": "XctN.Tino"
+        },
+        {
+            "id": 143693439,
+            "name": "XG.Dy"
+        },
+        {
+            "id": 206642367,
+            "name": "XG.Ghost"
+        },
+        {
+            "id": 138857296,
+            "name": "XG.JT-"
+        },
+        {
+            "id": 134276083,
+            "name": "XG.old eLeVeN"
+        },
+        {
+            "id": 137193239,
+            "name": "XG.Paparazi\u706c"
+        },
+        {
+            "id": 138543123,
+            "name": "XG.Pyw"
+        },
+        {
+            "id": 157475523,
+            "name": "XG.XinQ"
+        },
+        {
+            "id": 98887913,
+            "name": "xiao8"
+        },
+        {
+            "id": 89117038,
+            "name": "YapzOr"
+        },
+        {
+            "id": 88990397,
+            "name": "Zyori"
+        }
+    ]
+}
